@@ -1,8 +1,4 @@
 ﻿using FluentScheduler;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Hos.ScheduleMaster.Core;
 using Microsoft.Extensions.DependencyInjection;
 

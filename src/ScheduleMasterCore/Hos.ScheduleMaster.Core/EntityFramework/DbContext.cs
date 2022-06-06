@@ -29,7 +29,7 @@ namespace Hos.ScheduleMaster.Core.Models
             base.OnModelCreating(modelBuilder);		
 
 			 //字段类型适配
-			 modelBuilder.FixColumnsDataType<ScheduleDelayedEntity>();
+			modelBuilder.FixColumnsDataType<ScheduleDelayedEntity>();
 			modelBuilder.FixColumnsDataType<ScheduleEntity>();
 			modelBuilder.FixColumnsDataType<ScheduleExecutorEntity>();
 			modelBuilder.FixColumnsDataType<ScheduleHttpOptionEntity>();

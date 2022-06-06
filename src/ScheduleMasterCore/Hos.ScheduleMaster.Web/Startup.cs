@@ -1,9 +1,6 @@
-using System;
-using System.Linq;
 using Hos.ScheduleMaster.Core;
 using Hos.ScheduleMaster.Core.Models;
 using Hos.ScheduleMaster.Core.Repository;
-using Hos.ScheduleMaster.Core.Services.RemoteCaller;
 using Hos.ScheduleMaster.Web.Extension;
 using Hos.ScheduleMaster.Web.Filters;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -11,10 +8,11 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
+using System.Linq;
 
 namespace Hos.ScheduleMaster.Web
 {
