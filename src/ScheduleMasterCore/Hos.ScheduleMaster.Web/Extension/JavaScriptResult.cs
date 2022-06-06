@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Hos.ScheduleMaster.Web.Extension
 {
-    public class JavaScriptResult : ActionResult
+    public class JavaScriptResult : Microsoft.AspNetCore.Mvc.ActionResult
     {
         public string Scripts;
 
@@ -33,7 +33,7 @@ namespace Hos.ScheduleMaster.Web.Extension
 
     public static class JavaScriptResultExtension
     {
-        public static JavaScriptResult JavaScript(this Controller controller, string scripts)
+        public static JavaScriptResult JavaScript(this Microsoft.AspNetCore.Mvc.Controller controller, string scripts)
         {
             return new JavaScriptResult(scripts);
         }

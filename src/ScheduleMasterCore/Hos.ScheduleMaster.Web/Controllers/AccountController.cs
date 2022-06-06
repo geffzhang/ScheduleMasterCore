@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Hos.ScheduleMaster.Core;
+﻿using Hos.ScheduleMaster.Core;
 using Hos.ScheduleMaster.Core.Common;
 using Hos.ScheduleMaster.Core.Models;
 using Hos.ScheduleMaster.Web.Extension;
 using Hos.ScheduleMaster.Web.Filters;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using Hos.ScheduleMaster.Core.Interface;
+using System.Linq;
 
 namespace Hos.ScheduleMaster.Web.Controllers
 {
@@ -27,7 +23,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// 用户列表页 
         /// </summary>
         /// <returns></returns>
-        public ActionResult Index()
+        public Microsoft.AspNetCore.Mvc.ActionResult Index()
         {
             return View();
         }
@@ -38,7 +34,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// <param name="name"></param>
         /// <returns></returns>
         [AjaxRequestOnlyAttribute]
-        public ActionResult LoadUserPager(string name)
+        public Microsoft.AspNetCore.Mvc.ActionResult LoadUserPager(string name)
         {
             var pager = new ListPager<SystemUserEntity>(PageIndex, PageSize);
             if (!string.IsNullOrEmpty(name))
@@ -64,7 +60,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public ActionResult Edit(int id = 0)
+        public Microsoft.AspNetCore.Mvc.ActionResult Edit(int id = 0)
         {
             if (id != 0)
             {
@@ -84,7 +80,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost, AjaxRequestOnlyAttribute]
-        public ActionResult Edit(SystemUserEntity model)
+        public Microsoft.AspNetCore.Mvc.ActionResult Edit(SystemUserEntity model)
         {
             if (ModelState.IsValid)
             {
@@ -120,7 +116,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpPost, AjaxRequestOnlyAttribute]
-        public ActionResult UserEnable(int id)
+        public Microsoft.AspNetCore.Mvc.ActionResult UserEnable(int id)
         {
             var result = _accountService.UpdateUserStatus(id, (int)SystemUserStatus.Available);
             if (result)
@@ -136,7 +132,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpPost, AjaxRequestOnlyAttribute]
-        public ActionResult UserDisable(int id)
+        public Microsoft.AspNetCore.Mvc.ActionResult UserDisable(int id)
         {
             var result = _accountService.UpdateUserStatus(id, (int)SystemUserStatus.Disabled);
             if (result)
@@ -152,7 +148,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpPost, AjaxRequestOnlyAttribute]
-        public ActionResult UserDelete(int id)
+        public Microsoft.AspNetCore.Mvc.ActionResult UserDelete(int id)
         {
             var result = _accountService.UpdateUserStatus(id, (int)SystemUserStatus.Deleted);
             if (result)
@@ -168,7 +164,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpPost, AjaxRequestOnlyAttribute]
-        public ActionResult UserResetPwd(int id)
+        public Microsoft.AspNetCore.Mvc.ActionResult UserResetPwd(int id)
         {
             string defaultPwd = _config.GetValue<string>("AppSettings:AdminDefaultPwd");
             var result = _accountService.UpdateUserPassword(id, defaultPwd);

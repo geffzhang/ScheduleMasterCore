@@ -29,7 +29,7 @@ namespace Hos.ScheduleMaster.xUnitTest.Mock.Master
         public void GetDetail()
         {
             Guid sid = Guid.Parse("0b342982-efc9-41a9-b3cb-1385b517fcd1");
-            ViewResult result = (ViewResult)_controller.Detail(sid);
+            Microsoft.AspNetCore.Mvc.ViewResult result = (Microsoft.AspNetCore.Mvc.ViewResult)_controller.Detail(sid);
             Assert.Equal(sid, (result.Model as ScheduleContext).Schedule.Id);
         }
     }

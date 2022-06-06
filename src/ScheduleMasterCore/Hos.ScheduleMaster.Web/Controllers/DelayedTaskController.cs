@@ -27,7 +27,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// 任务列表页面
         /// </summary>
         /// <returns></returns>
-        public ActionResult Index()
+        public Microsoft.AspNetCore.Mvc.ActionResult Index()
         {
             ViewBag.PagerQueryUrl = Url.Action("QueryPager", "DelayedTask");
             return View();
@@ -39,7 +39,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// <param name="name"></param>
         /// <returns></returns>
         [HttpGet]
-        public ActionResult QueryPager(DateTime? startDate, DateTime? endDate, int? status, string topic = "", string contentkey = "", string workerName = "")
+        public Microsoft.AspNetCore.Mvc.ActionResult QueryPager(DateTime? startDate, DateTime? endDate, int? status, string topic = "", string contentkey = "", string workerName = "")
         {
             var pager = new ListPager<ScheduleDelayedInfo>(PageIndex, PageSize);
             if (startDate.HasValue)
@@ -70,7 +70,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// 创建页面
         /// </summary>
         /// <returns></returns>
-        public ActionResult Create()
+        public Microsoft.AspNetCore.Mvc.ActionResult Create()
         {
             ViewBag.WorkerList = _nodeService.QueryWorkerList();
             return View();
@@ -81,7 +81,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public async Task<ActionResult> Create(ScheduleDelayedInfo task)
+        public async Task<Microsoft.AspNetCore.Mvc.ActionResult> Create(ScheduleDelayedInfo task)
         {
             if (!ModelState.IsValid)
             {
@@ -103,7 +103,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// </summary>
         /// <param name="sid"></param>
         /// <returns></returns>
-        public ActionResult Detail(Guid sid)
+        public Microsoft.AspNetCore.Mvc.ActionResult Detail(Guid sid)
         {
             var model = _taskService.QueryById(sid);
             if (model == null)
@@ -119,7 +119,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<ActionResult> Execute([FromQuery]Guid id)
+        public async Task<Microsoft.AspNetCore.Mvc.ActionResult> Execute([FromQuery]Guid id)
         {
             var result = await _taskService.Execute(id);
             return this.JsonNet(result.Status == ResultStatus.Success, result.Message);
@@ -131,7 +131,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<ActionResult> Start([FromQuery]Guid id)
+        public async Task<Microsoft.AspNetCore.Mvc.ActionResult> Start([FromQuery]Guid id)
         {
             var result = await _taskService.Start(id);
             return this.JsonNet(result.Status == ResultStatus.Success, result.Message);
@@ -143,7 +143,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<ActionResult> Stop([FromQuery]Guid id)
+        public async Task<Microsoft.AspNetCore.Mvc.ActionResult> Stop([FromQuery]Guid id)
         {
             var result = await _taskService.Stop(id);
             return this.JsonNet(result.Status == ResultStatus.Success, result.Message);

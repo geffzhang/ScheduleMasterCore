@@ -39,7 +39,7 @@ namespace Hos.ScheduleMaster.Web.Filters
             }
             else
             {
-                context.Result = new RedirectResult("/Static/Page404");
+                context.Result = new Microsoft.AspNetCore.Mvc.RedirectResult("/Static/Page404");
             }
             context.ExceptionHandled = true;
         }

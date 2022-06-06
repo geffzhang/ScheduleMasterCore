@@ -16,7 +16,7 @@ namespace Hos.ScheduleMaster.Core.Common
         public static string MD5(string prestr)
         {
             StringBuilder sb = new StringBuilder(32);
-            MD5 md5 = new MD5CryptoServiceProvider();
+            MD5 md5 = System.Security.Cryptography.MD5.Create();
             byte[] t = md5.ComputeHash(Encoding.GetEncoding("UTF-8").GetBytes(prestr));
             for (int i = 0; i < t.Length; i++)
             {
@@ -49,7 +49,8 @@ namespace Hos.ScheduleMaster.Core.Common
         public static string EncryptAES(string pToEncrypt)
         {
             MemoryStream mStream = new MemoryStream();
-            RijndaelManaged aes = new RijndaelManaged();
+
+            var aes = Aes.Create("AesManaged");
 
             byte[] plainBytes = Encoding.UTF8.GetBytes(pToEncrypt);
             Byte[] bKey = new Byte[32];
@@ -88,7 +89,7 @@ namespace Hos.ScheduleMaster.Core.Common
             Array.Copy(Encoding.UTF8.GetBytes(Key.PadRight(bKey.Length)), bKey, bKey.Length);
 
             MemoryStream mStream = new MemoryStream(encryptedBytes);
-            RijndaelManaged aes = new RijndaelManaged();
+            var aes = Aes.Create("AesManaged");
             aes.Mode = CipherMode.ECB;
             aes.Padding = PaddingMode.PKCS7;
             aes.KeySize = 128;

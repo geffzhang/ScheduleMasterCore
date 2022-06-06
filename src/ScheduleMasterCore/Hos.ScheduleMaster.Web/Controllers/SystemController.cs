@@ -26,7 +26,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         public IScheduleService _scheduleService { get; set; }
 
         // GET: System
-        public ActionResult Index()
+        public Microsoft.AspNetCore.Mvc.ActionResult Index()
         {
             return View();
         }
@@ -35,7 +35,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// 节点列表页面
         /// </summary>
         /// <returns></returns>
-        public ActionResult Node()
+        public Microsoft.AspNetCore.Mvc.ActionResult Node()
         {
             return View();
         }
@@ -44,7 +44,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// 节点分页数据
         /// </summary>
         /// <returns></returns>
-        public ActionResult QueryNodePager(string keyword)
+        public Microsoft.AspNetCore.Mvc.ActionResult QueryNodePager(string keyword)
         {
             var pager = new ListPager<ServerNodeEntity>(PageIndex, PageSize);
             if (!string.IsNullOrEmpty(keyword))
@@ -60,7 +60,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public ActionResult NodeEdit(string name = "")
+        public Microsoft.AspNetCore.Mvc.ActionResult NodeEdit(string name = "")
         {
             if (string.IsNullOrEmpty(name))
             {
@@ -80,7 +80,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// <param name="entity"></param>
         /// <returns></returns>
         [HttpPost, AjaxRequestOnly]
-        public ActionResult NodeSave(ServerNodeEntity entity)
+        public Microsoft.AspNetCore.Mvc.ActionResult NodeSave(ServerNodeEntity entity)
         {
             if (ModelState.IsValid)
             {
@@ -116,7 +116,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost, AjaxRequestOnly]
-        public async Task<ActionResult> NodeConnect(string name)
+        public async Task<Microsoft.AspNetCore.Mvc.ActionResult> NodeConnect(string name)
         {
             var result = await _nodeService.NodeSwich(name, 1);
             if (result)
@@ -132,7 +132,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpPost, AjaxRequestOnly]
-        public async Task<ActionResult> NodeEnable(string name)
+        public async Task<Microsoft.AspNetCore.Mvc.ActionResult> NodeEnable(string name)
         {
             var result = await _nodeService.NodeSwich(name, 3);
             if (result)
@@ -148,7 +148,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpPost, AjaxRequestOnly]
-        public async Task<ActionResult> NodeDisable(string name)
+        public async Task<Microsoft.AspNetCore.Mvc.ActionResult> NodeDisable(string name)
         {
             var result = await _nodeService.NodeSwich(name, 2);
             if (result)
@@ -164,7 +164,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// <param name="name"></param>
         /// <returns></returns>
         [HttpPost, AjaxRequestOnly]
-        public ActionResult NodeDelete(string name)
+        public Microsoft.AspNetCore.Mvc.ActionResult NodeDelete(string name)
         {
             var result = _nodeService.DeleteNode(name);
             if (result)
@@ -178,7 +178,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// 参数配置页面
         /// </summary>
         /// <returns></returns>
-        public ActionResult Config()
+        public Microsoft.AspNetCore.Mvc.ActionResult Config()
         {
             var data = _systemService.GetConfigList();
             return View(data);
@@ -190,7 +190,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// <param name="form"></param>
         /// <returns></returns>
         [HttpPost]
-        public ActionResult SaveConfig(IFormCollection form)
+        public Microsoft.AspNetCore.Mvc.ActionResult SaveConfig(IFormCollection form)
         {
             Dictionary<string, string> items = new Dictionary<string, string>();
             foreach (string key in form.Keys)
@@ -210,7 +210,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// 日志列表页面
         /// </summary>
         /// <returns></returns>
-        public ActionResult Log()
+        public Microsoft.AspNetCore.Mvc.ActionResult Log()
         {
             return View();
         }
@@ -224,7 +224,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// <param name="category"></param>
         /// <returns></returns>
         [HttpGet]
-        public ActionResult QueryLogPager(DateTime? startdate, DateTime? enddate, Guid? sid, int? category)
+        public Microsoft.AspNetCore.Mvc.ActionResult QueryLogPager(DateTime? startdate, DateTime? enddate, Guid? sid, int? category)
         {
             var pager = new ListPager<SystemLogEntity>(PageIndex, PageSize);
             if (sid.HasValue)
@@ -251,7 +251,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// 清理日志页面
         /// </summary>
         /// <returns></returns>
-        public ActionResult ClearLog()
+        public Microsoft.AspNetCore.Mvc.ActionResult ClearLog()
         {
             List<SelectListItem> selectData = new List<SelectListItem>();
             selectData.Add(new SelectListItem() { Text = "系统日志", Value = "0" });
@@ -275,7 +275,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// <param name="enddate"></param>
         /// <returns></returns>
         [HttpPost, AjaxRequestOnly]
-        public async Task<ActionResult> ClearLog(Guid? sid, int? category, DateTime? startdate, DateTime? enddate)
+        public async Task<Microsoft.AspNetCore.Mvc.ActionResult> ClearLog(Guid? sid, int? category, DateTime? startdate, DateTime? enddate)
         {
             var result = await _systemService.DeleteLog(sid, category, startdate, enddate);
             if (result > 0)

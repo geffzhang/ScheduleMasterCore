@@ -1,7 +1,7 @@
 ﻿using Hos.ScheduleMaster.Core.Models;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Text.Json;
 
 namespace Hos.ScheduleMaster.Core
 {
@@ -15,7 +15,7 @@ namespace Hos.ScheduleMaster.Core
         {
             get
             {
-                return Newtonsoft.Json.JsonConvert.DeserializeObject<List<ScheduleParam>>(Schedule.CustomParamsJson);
+                return  JsonSerializer.Deserialize<List<ScheduleParam>>(Schedule.CustomParamsJson);
             }
         }
 

@@ -12,13 +12,13 @@ namespace Hos.ScheduleMaster.Web.Controllers
     /// <summary>
     /// 一些公共的静态页面
     /// </summary>
-    public class StaticController : Controller
+    public class StaticController : Microsoft.AspNetCore.Mvc.Controller
     {
         /// <summary>
         /// 404页面
         /// </summary>
         /// <returns></returns>
-        public ActionResult Page404()
+        public Microsoft.AspNetCore.Mvc.ActionResult Page404()
         {
             return View();
         }

@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
+using System.Text.Json;
 
 namespace Hos.ScheduleMaster.Core.Dto
 {
@@ -54,11 +54,11 @@ namespace Hos.ScheduleMaster.Core.Dto
         {
             get
             {
-                return Newtonsoft.Json.JsonConvert.DeserializeObject<List<ScheduleParam>>(CustomParamsJson);
+                return  JsonSerializer.Deserialize<List<ScheduleParam>>(CustomParamsJson);
             }
             set
             {
-                this.CustomParamsJson = Newtonsoft.Json.JsonConvert.SerializeObject(value);
+                this.CustomParamsJson = JsonSerializer.Serialize(value);
             }
         }
     }

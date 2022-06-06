@@ -14,7 +14,7 @@ using Hos.ScheduleMaster.Core;
 
 namespace Hos.ScheduleMaster.Web.Controllers
 {
-    public class LoginController : Controller
+    public class LoginController : Microsoft.AspNetCore.Mvc.Controller
     {
 
         [Autowired]
@@ -36,7 +36,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// <param name="password"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<ActionResult> In(string username, string password)
+        public async Task<Microsoft.AspNetCore.Mvc.ActionResult> In(string username, string password)
         {
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
@@ -64,7 +64,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// 注销登录状态
         /// </summary>
         /// <returns></returns>
-        public async Task<ActionResult> Out()
+        public async Task<Microsoft.AspNetCore.Mvc.ActionResult> Out()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Index");

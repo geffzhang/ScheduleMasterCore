@@ -15,7 +15,7 @@ using Newtonsoft.Json;
 
 namespace Hos.ScheduleMaster.Web.Controllers
 {
-    public class AdminController : Controller
+    public class AdminController : Microsoft.AspNetCore.Mvc.Controller
     {
         [Autowired]
         public IAccountService _accountService { get; set; }
@@ -73,7 +73,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// 返回404页面
         /// </summary>
         /// <returns></returns>
-        public ActionResult PageNotFound()
+        public Microsoft.AspNetCore.Mvc.ActionResult PageNotFound()
         {
             return RedirectToAction("Page404", "Static");
         }
@@ -113,7 +113,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
             }
         }
 
-        public override void OnActionExecuted(ActionExecutedContext filterContext)
+        public override void OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext filterContext)
         {
             //增加登录token的有效时间
             //HttpCookie token = Request.Cookies[tokenName];
@@ -138,7 +138,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         /// </summary>
         /// <param name="filterContext"></param>
         /// 
-        public override void OnActionExecuting(ActionExecutingContext context)
+        public override void OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext context)
         {
             var anonymousAction = (context.ActionDescriptor as ControllerActionDescriptor).MethodInfo.GetCustomAttributes(typeof(AllowAnonymousAttribute), false);
             if (!anonymousAction.Any())
@@ -163,7 +163,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
                     }
                     else
                     {
-                        context.Result = new RedirectResult("/Login/Index");
+                        context.Result = new Microsoft.AspNetCore.Mvc.RedirectResult("/Login/Index");
                     }
                 }
             }

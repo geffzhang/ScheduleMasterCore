@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 
 namespace Hos.ScheduleMaster.QuartzHost.Filters
 {
-    public class ApiValidationFilter : IActionFilter
+    public class ApiValidationFilter : Microsoft.AspNetCore.Mvc.Filters.IActionFilter
     {
-        public void OnActionExecuted(ActionExecutedContext context)
+        public void OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext context)
         {
         }
 
-        public void OnActionExecuting(ActionExecutingContext context)
+        public void OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext context)
         {
             var anonymous = (context.ActionDescriptor as ControllerActionDescriptor).MethodInfo.GetCustomAttributes(typeof(AllowAnonymousAttribute), false);
             if (anonymous.Any())

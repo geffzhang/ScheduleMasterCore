@@ -1,10 +1,5 @@
 ﻿using Hos.ScheduleMaster.Web.Extension;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Filters;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Hos.ScheduleMaster.Web.Filters
 {
@@ -13,7 +8,7 @@ namespace Hos.ScheduleMaster.Web.Filters
     /// by hoho
     /// </summary>
     [AttributeUsage(AttributeTargets.Method | AttributeTargets.Class, AllowMultiple = false)]
-    public class AjaxRequestOnlyAttribute : ActionFilterAttribute
+    public class AjaxRequestOnlyAttribute : Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute
     {
         public AjaxRequestOnlyAttribute()
         {
@@ -22,12 +17,12 @@ namespace Hos.ScheduleMaster.Web.Filters
 
         /// <summary>在执行操作方法之前由 ASP.NET MVC 框架调用。</summary>
         /// <param name="filterContext">筛选器上下文。</param>
-        public override void OnActionExecuting(ActionExecutingContext filterContext)
+        public override void OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext filterContext)
         {
             var request = filterContext.HttpContext.Request;
             if (!request.IsAjaxRequest())
             {
-                filterContext.Result = new RedirectResult("~/Static/Page404");
+                filterContext.Result = new Microsoft.AspNetCore.Mvc.RedirectResult("~/Static/Page404");
             }
             base.OnActionExecuting(filterContext);
         }

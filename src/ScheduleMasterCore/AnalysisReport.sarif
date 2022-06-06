@@ -1,0 +1,1589 @@
+﻿{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Dependency Analysis",
+          "semanticVersion": "0.3.326103",
+          "informationUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview",
+          "rules": [
+            {
+              "id": "UA106",
+              "name": "PackageToBeAdded",
+              "fullDescription": {
+                "text": "Packages that need to be added in order to upgrade the project to chosen TFM"
+              },
+              "helpUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview"
+            },
+            {
+              "id": "UA105",
+              "name": "PackageToBeDeleted",
+              "fullDescription": {
+                "text": "Packages that need to be deleted in order to upgrade the project to chosen TFM"
+              },
+              "helpUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview"
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "UA106",
+          "message": {
+            "text": "Package Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.3.326103 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Base/Hos.ScheduleMaster.Base.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "message": {
+            "text": "Package Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.3.326103 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Core/Hos.ScheduleMaster.Core.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "message": {
+            "text": "Package Newtonsoft.Json needs to be removed as its a transitive dependency that is not required"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.QuartzHost/Hos.ScheduleMaster.QuartzHost.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "message": {
+            "text": "Package Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.3.326103 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.QuartzHost/Hos.ScheduleMaster.QuartzHost.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "message": {
+            "text": "Package Microsoft.AspNetCore.Mvc.NewtonsoftJson, Version=6.0.5 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.QuartzHost/Hos.ScheduleMaster.QuartzHost.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "message": {
+            "text": "Package Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.3.326103 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Hos.ScheduleMaster.Web.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "message": {
+            "text": "Package Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.3.326103 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Demo/Hos.ScheduleMaster.Demo.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "message": {
+            "text": "Package Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.3.326103 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.xUnitTest/Hos.ScheduleMaster.xUnitTest.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    },
+    {
+      "tool": {
+        "driver": {
+          "name": "API Upgradability",
+          "semanticVersion": "0.3.326103",
+          "informationUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview",
+          "rules": [
+            {
+              "id": "UA0002",
+              "fullDescription": {
+                "text": "Types should be upgraded"
+              },
+              "helpUri": "about:blank"
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.QuartzHost/Filters/ApiValidationFilter.cs"
+                },
+                "region": {
+                  "startLine": 13
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.QuartzHost/Filters/ApiValidationFilter.cs"
+                },
+                "region": {
+                  "startLine": 15
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.QuartzHost/Filters/ApiValidationFilter.cs"
+                },
+                "region": {
+                  "startLine": 19
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Filters/AccessControlFilter.cs"
+                },
+                "region": {
+                  "startLine": 14
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Filters/AccessControlFilter.cs"
+                },
+                "region": {
+                  "startLine": 25
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Filters/AccessControlFilter.cs"
+                },
+                "region": {
+                  "startLine": 29
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/AdminController.cs"
+                },
+                "region": {
+                  "startLine": 18
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/AdminController.cs"
+                },
+                "region": {
+                  "startLine": 76
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/AdminController.cs"
+                },
+                "region": {
+                  "startLine": 116
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/AdminController.cs"
+                },
+                "region": {
+                  "startLine": 141
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/AdminController.cs"
+                },
+                "region": {
+                  "startLine": 166
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Filters/AjaxRequestOnlyAttribute.cs"
+                },
+                "region": {
+                  "startLine": 16
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Filters/AjaxRequestOnlyAttribute.cs"
+                },
+                "region": {
+                  "startLine": 25
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Filters/AjaxRequestOnlyAttribute.cs"
+                },
+                "region": {
+                  "startLine": 30
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Extension/JavaScriptResult.cs"
+                },
+                "region": {
+                  "startLine": 10
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Extension/JavaScriptResult.cs"
+                },
+                "region": {
+                  "startLine": 36
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Extension/JsonNetResult.cs"
+                },
+                "region": {
+                  "startLine": 16
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Extension/JsonNetResult.cs"
+                },
+                "region": {
+                  "startLine": 57
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Extension/JsonNetResult.cs"
+                },
+                "region": {
+                  "startLine": 62
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/LoginController.cs"
+                },
+                "region": {
+                  "startLine": 17
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/LoginController.cs"
+                },
+                "region": {
+                  "startLine": 39
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/LoginController.cs"
+                },
+                "region": {
+                  "startLine": 67
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/StaticController.cs"
+                },
+                "region": {
+                  "startLine": 15
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/StaticController.cs"
+                },
+                "region": {
+                  "startLine": 21
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/SystemController.cs"
+                },
+                "region": {
+                  "startLine": 29
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/SystemController.cs"
+                },
+                "region": {
+                  "startLine": 38
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/SystemController.cs"
+                },
+                "region": {
+                  "startLine": 47
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/SystemController.cs"
+                },
+                "region": {
+                  "startLine": 63
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/SystemController.cs"
+                },
+                "region": {
+                  "startLine": 83
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/SystemController.cs"
+                },
+                "region": {
+                  "startLine": 119
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/SystemController.cs"
+                },
+                "region": {
+                  "startLine": 135
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/SystemController.cs"
+                },
+                "region": {
+                  "startLine": 151
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/SystemController.cs"
+                },
+                "region": {
+                  "startLine": 167
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/SystemController.cs"
+                },
+                "region": {
+                  "startLine": 181
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/SystemController.cs"
+                },
+                "region": {
+                  "startLine": 193
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/SystemController.cs"
+                },
+                "region": {
+                  "startLine": 213
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/SystemController.cs"
+                },
+                "region": {
+                  "startLine": 227
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/SystemController.cs"
+                },
+                "region": {
+                  "startLine": 254
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/SystemController.cs"
+                },
+                "region": {
+                  "startLine": 278
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Filters/GlobalExceptionFilter.cs"
+                },
+                "region": {
+                  "startLine": 42
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/AccountController.cs"
+                },
+                "region": {
+                  "startLine": 30
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/AccountController.cs"
+                },
+                "region": {
+                  "startLine": 41
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/AccountController.cs"
+                },
+                "region": {
+                  "startLine": 67
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/AccountController.cs"
+                },
+                "region": {
+                  "startLine": 87
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/AccountController.cs"
+                },
+                "region": {
+                  "startLine": 123
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/AccountController.cs"
+                },
+                "region": {
+                  "startLine": 139
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/AccountController.cs"
+                },
+                "region": {
+                  "startLine": 155
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/AccountController.cs"
+                },
+                "region": {
+                  "startLine": 171
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/ConsoleController.cs"
+                },
+                "region": {
+                  "startLine": 35
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/ConsoleController.cs"
+                },
+                "region": {
+                  "startLine": 44
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/DelayedTaskController.cs"
+                },
+                "region": {
+                  "startLine": 30
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/DelayedTaskController.cs"
+                },
+                "region": {
+                  "startLine": 42
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/DelayedTaskController.cs"
+                },
+                "region": {
+                  "startLine": 73
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/DelayedTaskController.cs"
+                },
+                "region": {
+                  "startLine": 84
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/DelayedTaskController.cs"
+                },
+                "region": {
+                  "startLine": 106
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/DelayedTaskController.cs"
+                },
+                "region": {
+                  "startLine": 122
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/DelayedTaskController.cs"
+                },
+                "region": {
+                  "startLine": 134
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/DelayedTaskController.cs"
+                },
+                "region": {
+                  "startLine": 146
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/ScheduleController.cs"
+                },
+                "region": {
+                  "startLine": 32
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/ScheduleController.cs"
+                },
+                "region": {
+                  "startLine": 59
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/ScheduleController.cs"
+                },
+                "region": {
+                  "startLine": 46
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/ScheduleController.cs"
+                },
+                "region": {
+                  "startLine": 92
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/ScheduleController.cs"
+                },
+                "region": {
+                  "startLine": 72
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/ScheduleController.cs"
+                },
+                "region": {
+                  "startLine": 106
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/ScheduleController.cs"
+                },
+                "region": {
+                  "startLine": 119
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/ScheduleController.cs"
+                },
+                "region": {
+                  "startLine": 139
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/ScheduleController.cs"
+                },
+                "region": {
+                  "startLine": 195
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/ScheduleController.cs"
+                },
+                "region": {
+                  "startLine": 223
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/ScheduleController.cs"
+                },
+                "region": {
+                  "startLine": 243
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/ScheduleController.cs"
+                },
+                "region": {
+                  "startLine": 256
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/ScheduleController.cs"
+                },
+                "region": {
+                  "startLine": 268
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/ScheduleController.cs"
+                },
+                "region": {
+                  "startLine": 280
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/ScheduleController.cs"
+                },
+                "region": {
+                  "startLine": 292
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/ScheduleController.cs"
+                },
+                "region": {
+                  "startLine": 315
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/ScheduleController.cs"
+                },
+                "region": {
+                  "startLine": 304
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/ScheduleController.cs"
+                },
+                "region": {
+                  "startLine": 328
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.Web/Controllers/ScheduleController.cs"
+                },
+                "region": {
+                  "startLine": 351
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/zsygz/Documents/GitHub/ScheduleMasterCore/src/ScheduleMasterCore/Hos.ScheduleMaster.xUnitTest/Mock/Master/ScheduleControllerTest.cs"
+                },
+                "region": {
+                  "startLine": 32
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

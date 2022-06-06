@@ -11,7 +11,7 @@ using Hos.ScheduleMaster.Core.Common;
 
 namespace Hos.ScheduleMaster.Web.Filters
 {
-    public class AccessControlFilter : IActionFilter
+    public class AccessControlFilter : Microsoft.AspNetCore.Mvc.Filters.IActionFilter
     {
         private IHttpContextAccessor _accessor;
         private SmDbContext _db;
@@ -22,11 +22,11 @@ namespace Hos.ScheduleMaster.Web.Filters
             _db = db;
         }
 
-        public void OnActionExecuted(ActionExecutedContext context)
+        public void OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext context)
         {
         }
 
-        public void OnActionExecuting(ActionExecutingContext context)
+        public void OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext context)
         {
             string userName = context.HttpContext.Request.Headers["ms_auth_user"].FirstOrDefault();
             string secret = context.HttpContext.Request.Headers["ms_auth_secret"].FirstOrDefault();

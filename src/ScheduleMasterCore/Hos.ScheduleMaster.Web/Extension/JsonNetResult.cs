@@ -1,19 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Web;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using System;
 
 namespace Hos.ScheduleMaster.Web.Extension
 {
     /// <summary>
     /// 用json.net重写一个ControllerResult
     /// </summary>
-    public class JsonNetResult : ActionResult
+    public class JsonNetResult : Microsoft.AspNetCore.Mvc.ActionResult
     {
         // 构造函数
         public JsonNetResult()
@@ -54,12 +50,12 @@ namespace Hos.ScheduleMaster.Web.Extension
     /// </summary>
     public static class JsonNetResultExtension
     {
-        public static JsonNetResult JsonNet(this Controller controller, bool success, string msg = "", string url = "", object data = null)
+        public static JsonNetResult JsonNet(this Microsoft.AspNetCore.Mvc.Controller controller, bool success, string msg = "", string url = "", object data = null)
         {
             return JsonNet(new { Success = success, Message = msg, Url = url, Data = data });
         }
 
-        public static JsonNetResult JsonNet(this Controller controller, object data)
+        public static JsonNetResult JsonNet(this Microsoft.AspNetCore.Mvc.Controller controller, object data)
         {
             return JsonNet(data);
         }

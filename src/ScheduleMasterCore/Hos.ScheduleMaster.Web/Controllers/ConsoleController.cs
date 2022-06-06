@@ -32,7 +32,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
             return View("../Schedule/Index");
         }
 
-        public ActionResult Home()
+        public Microsoft.AspNetCore.Mvc.ActionResult Home()
         {
             //我负责的top任务，创建时间倒序
             var pager = new ListPager<ScheduleInfo>(1, 7);
@@ -41,7 +41,7 @@ namespace Hos.ScheduleMaster.Web.Controllers
         }
 
         [HttpGet]
-        public ActionResult GetHomeSummary()
+        public Microsoft.AspNetCore.Mvc.ActionResult GetHomeSummary()
         {
             //总任务数
             int task_total = _scheduleService.QueryScheduleCount(null);
